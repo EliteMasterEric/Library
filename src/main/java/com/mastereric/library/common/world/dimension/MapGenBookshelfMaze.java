@@ -32,7 +32,8 @@ public class MapGenBookshelfMaze extends CompatMapGenStructure {
 
     @Override
     public boolean generateStructure(World worldIn, Random randomIn, ChunkPos chunkCoord) {
-        // This gets called, but canSpawnStructure and getStructureStart
+        // This print gets called, but getStructureStart and canSpawnStructureAtCoords do not,
+        // meaning somehow generateStructure is failing?
         LogUtility.info("generateStructure()");
         return super.generateStructure(worldIn, randomIn, chunkCoord);
     }
